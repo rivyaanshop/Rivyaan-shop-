@@ -1,159 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivyaan Collective | Boutique</title>
-    <style>
-        :root {
-            --bg-pink: #fff0f3;
-            --soft-pink: #ffdae9;
-            --deep-pink: #ff8fab;
-            --text-color: #5e3a44;
-        }
-        body { 
-            font-family: 'Georgia', serif; 
-            background-color: var(--bg-pink); 
-            color: var(--text-color); 
-            margin: 0; 
-            padding: 0; 
-            text-align: center;
-        }
-        
-        /* Moving Offer Bar */
-        .offer-bar { 
-            background: #ffb3c1; 
-            color: white; 
-            padding: 10px 0; 
-            font-size: 14px; 
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        /* Elegant Header */
-        header { 
-            padding: 50px 20px; 
-            background: white;
-            border-bottom: 3px solid var(--soft-pink);
-        }
-        .brand { 
-            font-size: 35px; 
-            letter-spacing: 4px; 
-            text-transform: uppercase; 
-            margin: 0;
-            font-weight: lighter;
-        }
-        .tagline { 
-            font-size: 16px; 
-            font-style: italic; 
-            opacity: 0.7; 
-            margin-top: 5px;
-        }
+export default function RivyaanCollective() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-rose-50 text-gray-800 overflow-hidden">
 
-        .main-content { 
-            max-width: 450px; 
-            margin: 30px auto; 
-            padding: 0 20px; 
-        }
-
-        /* Image Display Card */
-        .image-card {
-            background: white;
-            padding: 10px;
-            border-radius: 30px 30px 5px 5px;
-            box-shadow: 0 10px 30px rgba(255, 143, 171, 0.2);
-            border: 2px solid var(--soft-pink);
-        }
-        .product-img { 
-            width: 100%; 
-            border-radius: 25px 25px 5px 5px; 
-            display: block;
-        }
-
-        .product-info {
-            background: white;
-            padding: 20px;
-            margin-top: -10px;
-            border-radius: 0 0 20px 20px;
-            border: 2px solid var(--soft-pink);
-            border-top: none;
-        }
-
-        /* Buy Button */
-        .buy-btn {
-            display: block;
-            background-color: var(--deep-pink);
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 15px;
-            font-weight: bold;
-            font-size: 20px;
-            margin-top: 15px;
-            box-shadow: 0 5px 15px rgba(255, 143, 171, 0.4);
-            transition: 0.3s;
-        }
-
-        /* Social Links */
-        .social-links { margin-top: 30px; }
-        .social-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            border: 1px solid var(--soft-pink);
-        }
-        
-        .footer-earn {
-            margin-top: 25px;
-            padding: 15px;
-            border: 2px dashed var(--deep-pink);
-            border-radius: 10px;
-            font-weight: bold;
-            background: #fff;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="offer-bar">✨ BUTTERFLY COLLECTION SPECIAL OFFER ✨</div>
-
-    <header>
-        <h1 class="brand">Rivyaan Collective</h1>
-        <p class="tagline">Elegance in Every Detail</p>
-    </header>
-
-    <div class="main-content">
-        <div class="image-card">
-            <!-- Stable Link -->
-            <img src="https://m.media-amazon.com/images/I/71Xm2WpWnGL._AC_SL1500_.jpg" class="product-img" alt="Jewelry Set">
+      {/* Running Offer Bar */}
+      <div className="bg-gradient-to-r from-pink-700 via-rose-600 to-pink-500 text-white py-3 overflow-hidden whitespace-nowrap">
+        <div className="animate-marquee inline-block text-sm font-semibold">
+          ✨🦋 LIMITED OFFER: Butterfly Jewelry Set @ ₹79 Only! --- 💰 Earn ₹20 - ₹100 on every sale! --- 🚚 Free Style Vibes ✨
         </div>
-        
-        <div class="product-info">
-            <h3 style="margin: 0;">Complete Butterfly Set</h3>
-            <p style="font-size: 14px; opacity: 0.8;">Necklace + Earrings + Bracelet</p>
-            <a href="https://fktr.in/h60m1cC" class="buy-btn">
-                Grab Deal @ ₹79 Only!
+      </div>
+
+      {/* Navbar */}
+      <div className="flex justify-between items-center px-6 py-5">
+        <div>
+          <h1 className="text-4xl font-bold tracking-[6px] text-rose-900">
+            RIVYAAN
+          </h1>
+          <p className="tracking-[8px] text-sm text-gray-600 mt-1">
+            COLLECTIVE
+          </p>
+        </div>
+
+        <button className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
+          Shop Now ✨
+        </button>
+      </div>
+
+      {/* Hero Section */}
+      <div className="grid md:grid-cols-2 gap-8 items-center px-6 md:px-14 py-10">
+
+        <div>
+          <p className="text-pink-400 text-2xl italic mb-3">
+            Butterfly Jewelry Set
+          </p>
+
+          <h2 className="text-6xl font-bold leading-tight text-rose-950">
+            ELEGANCE
+            <br />
+            IN EVERY DETAIL
+          </h2>
+
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+            A perfect blend of charm & trend — just for you! 💖
+          </p>
+
+          <div className="flex gap-5 mt-8 flex-wrap">
+            <div className="bg-white px-5 py-3 rounded-2xl shadow-md">
+              ✨ Trendy
+            </div>
+
+            <div className="bg-white px-5 py-3 rounded-2xl shadow-md">
+              💎 Premium
+            </div>
+
+            <div className="bg-white px-5 py-3 rounded-2xl shadow-md">
+              🛍 Affordable
+            </div>
+          </div>
+        </div>
+
+        {/* Main Product Image */}
+        <div className="relative">
+          <img
+            src="https://i.imgur.com/IK4F1pM.jpeg"
+            alt="Jewelry"
+            className="rounded-[40px] shadow-2xl"
+          />
+
+          <div className="absolute top-5 right-5 bg-yellow-100 text-rose-900 px-5 py-3 rounded-full shadow-lg font-bold">
+            Special Offer ✨
+          </div>
+        </div>
+      </div>
+
+      {/* Product Section */}
+      <div className="bg-white rounded-[40px] shadow-xl mx-4 md:mx-10 p-6 md:p-10">
+
+        <div className="grid md:grid-cols-2 gap-10">
+
+          {/* Product Images */}
+          <div className="grid grid-cols-2 gap-4">
+
+            <img
+              src="https://i.imgur.com/j8mK3Yp.jpeg"
+              className="rounded-3xl h-56 w-full object-cover"
+            />
+
+            <img
+              src="https://i.imgur.com/l0X7KQm.jpeg"
+              className="rounded-3xl h-56 w-full object-cover"
+            />
+
+            <img
+              src="https://i.imgur.com/8kL2T5V.jpeg"
+              className="rounded-3xl h-56 w-full object-cover"
+            />
+
+            <img
+              src="https://i.imgur.com/Z9eR0wL.jpeg"
+              className="rounded-3xl h-56 w-full object-cover"
+            />
+          </div>
+
+          {/* Product Details */}
+          <div className="flex flex-col justify-center">
+
+            <h2 className="text-5xl font-bold text-rose-900">
+              Butterfly Jewelry Set
+            </h2>
+
+            <div className="mt-4 inline-block bg-pink-100 text-pink-700 px-4 py-2 rounded-full font-semibold">
+              Necklace + Earrings + Bracelet
+            </div>
+
+            <ul className="mt-6 space-y-3 text-lg text-gray-700">
+              <li>🦋 Beautiful Butterfly Pendant Necklace</li>
+              <li>✨ Elegant Stud Earrings</li>
+              <li>💖 Beaded Bracelet with Butterfly Charm</li>
+              <li>🌸 Premium Quality & Skin Friendly</li>
+              <li>🎁 Perfect for Daily Wear & Gifts</li>
+            </ul>
+
+            <div className="mt-8">
+              <p className="text-gray-500 line-through text-xl">
+                MRP ₹299/-
+              </p>
+
+              <h3 className="text-6xl font-bold text-pink-600 mt-2">
+                ₹79/-
+              </h3>
+            </div>
+
+            <a
+              href="https://fktr.in/h60m1cC"
+              target="_blank"
+              className="mt-8 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-center py-5 rounded-2xl text-2xl font-bold shadow-lg hover:scale-105 transition"
+            >
+              🛒 BUY NOW - ₹79 ONLY
             </a>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Social Buttons */}
+      <div className="grid md:grid-cols-2 gap-6 px-6 md:px-10 py-10">
+
+        <a
+          href="#"
+          className="bg-gradient-to-r from-green-500 to-green-400 text-white rounded-[30px] p-6 shadow-xl hover:scale-105 transition"
+        >
+          <div className="text-4xl">📱</div>
+
+          <h3 className="text-3xl font-bold mt-3">
+            Join Our WhatsApp Channel
+          </h3>
+
+          <p className="mt-2 text-lg opacity-90">
+            Get latest updates & offers ✨
+          </p>
+        </a>
+
+        <a
+          href="#"
+          className="bg-gradient-to-r from-sky-500 to-blue-500 text-white rounded-[30px] p-6 shadow-xl hover:scale-105 transition"
+        >
+          <div className="text-4xl">✈️</div>
+
+          <h3 className="text-3xl font-bold mt-3">
+            Join Our Telegram Channel
+          </h3>
+
+          <p className="mt-2 text-lg opacity-90">
+            Exclusive deals & quick updates 💖
+          </p>
+        </a>
+      </div>
+
+      {/* Footer */}
+      <div className="text-center py-10">
+
+        <div className="flex justify-center gap-5 text-3xl mb-5">
+          <div>📸</div>
+          <div>📌</div>
+          <div>💖</div>
         </div>
 
-        <div class="social-links">
-            <a href="YOUR_WA_LINK" class="social-box">💬 Join Our WhatsApp</a>
-            <a href="YOUR_TG_LINK" class="social-box">✈️ Join Telegram</a>
-        </div>
+        <p className="text-gray-500 text-lg">
+          © 2026 Rivyaan Collective | All Rights Reserved 💕
+        </p>
+      </div>
 
-        <div class="footer-earn">
-            💰 Earn ₹20 - ₹100 on Every Sale!
-        </div>
-        
-        <p style="font-size: 10px; margin-top: 30px; opacity: 0.5;">© 2026 Rivyaan Collective</p>
+      {/* Marquee Animation */}
+      <style>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 15s linear infinite;
+        }
+      `}</style>
     </div>
-
-</body>
-</html>
+  );
+}
