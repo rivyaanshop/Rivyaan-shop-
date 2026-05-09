@@ -6,14 +6,15 @@
     <title>Rivyaan Collective</title>
     <style>
         body { 
-            font-family: 'Segoe UI', sans-serif; 
-            background-color: #E0E0E0; /* Clean Grey Background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #E0E0E0; 
             color: #000000; 
             text-align: center; 
             margin: 0; 
             padding: 0; 
             overflow-x: hidden;
         }
+        
         .moving-bar { 
             background: #000000; 
             color: #ffffff; 
@@ -38,13 +39,23 @@
             text-transform: uppercase;
         }
 
+        /* IMAGE AREA FIX */
+        .image-container {
+            width: 85%;
+            max-width: 300px;
+            margin: 0 auto 25px auto;
+            background: #ffffff; /* Image load na hone par white box dikhega */
+            border-radius: 15px;
+            border: 4px solid #000000;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            line-height: 0;
+        }
+
         .product-img { 
-            width: 85%; 
-            max-width: 320px; 
-            border-radius: 15px; 
-            border: 4px solid #000000; 
-            margin-bottom: 25px; 
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+            width: 100%; 
+            height: auto;
+            display: block;
         }
         
         .links-container { max-width: 400px; margin: 0 auto; padding: 0 15px; }
@@ -93,7 +104,9 @@
     
     <div class="brand-name">Rivyaan Collective</div>
 
-    <img src="https://m.media-amazon.com/images/I/71Xm2WpWnGL._AC_SL1500_.jpg" alt="Butterfly Jewelry" class="product-img">
+    <div class="image-container">
+        <img src="https://images.clothes.com/b0/12345/1.jpg" onerror="this.src='https://m.media-amazon.com/images/I/71Xm2WpWnGL._AC_SL1500_.jpg'" alt="Butterfly Jewelry" class="product-img">
+    </div>
 
     <div class="links-container">
         <a href="https://fktr.in/h60m1cC" class="link-card">
