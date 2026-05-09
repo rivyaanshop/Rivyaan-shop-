@@ -1,132 +1,42 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rivyaan Collective</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            background-color: #FF00FF; /* Full Magenta */
-            color: #330033; /* Dark Font */
-            text-align: center; 
-            margin: 0; 
-            padding: 0; 
-            overflow-x: hidden;
-        }
-        
-        /* Chalta hua Offer Bar */
-        .moving-bar {
-            background: #330033;
-            color: #FF00FF;
-            padding: 12px 0;
-            font-weight: bold;
-            font-size: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        .moving-text {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 12s linear infinite;
-        }
-        @keyframes marquee {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-100%, 0); }
-        }
-
-        .brand-name { 
-            font-size: 36px; 
-            color: #330033; 
-            margin: 25px 0; 
-            font-family: 'Cursive', sans-serif;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        .product-img { 
-            width: 85%; 
-            max-width: 320px; 
-            border-radius: 20px; 
-            border: 5px solid #330033; 
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
+        body { font-family: 'Segoe UI', sans-serif; background-color: #A50B5E; color: #2D041A; text-align: center; margin: 0; padding: 0; overflow-x: hidden; }
+        .moving-bar { background: #2D041A; color: #FFB6C1; padding: 12px 0; font-weight: bold; white-space: nowrap; overflow: hidden; }
+        .moving-text { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; }
+        @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+        .brand-name { font-size: 34px; color: #2D041A; margin: 25px 0; font-family: 'Cursive', sans-serif; font-weight: 900; }
+        .product-img { width: 85%; max-width: 320px; border-radius: 20px; border: 4px solid #2D041A; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
         .links-container { max-width: 400px; margin: 0 auto; padding: 0 15px; }
-
-        .link-card { 
-            background: #330033; 
-            border-radius: 15px; 
-            padding: 20px; 
-            margin-bottom: 15px; 
-            display: block; 
-            text-decoration: none; 
-            color: #ffffff; 
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .price-tag { color: #FF00FF; font-size: 24px; font-weight: 900; display: block; margin-top: 5px; }
-
-        .social-btns-row { display: flex; justify-content: space-between; margin-top: 10px; }
-        .social-btn { 
-            width: 48%;
-            padding: 15px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .wa { background-color: #25D366; }
-        .tg { background-color: #0088cc; }
-
-        .earn-section {
-            background: rgba(51, 0, 51, 0.15);
-            padding: 15px;
-            margin-top: 25px;
-            font-weight: 800;
-            border-top: 3px dashed #330033;
-            color: #330033;
-        }
+        .link-card { background: #2D041A; border-radius: 15px; padding: 20px; margin-bottom: 15px; display: block; text-decoration: none; color: #ffffff; font-weight: bold; }
+        .price-tag { color: #FFB6C1; font-size: 24px; font-weight: 900; display: block; }
+        .social-btn { display: block; width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 12px; text-decoration: none; color: white; font-weight: bold; }
+        .wa-channel { background-color: #25D366; }
+        .tg-link { background-color: #0088cc; }
+        .earn-tag-english { background: rgba(45, 4, 26, 0.15); padding: 15px; margin-top: 25px; font-weight: 800; border-top: 2px dashed #2D041A; color: #2D041A; font-size: 18px; }
     </style>
 </head>
 <body>
-
     <div class="moving-bar">
-        <div class="moving-text">
-            🚀 SHARE & EARN: Har sale par kamayein ₹20 se ₹100 tak! --- 🔥 LOOT DEAL: Butterfly Jewelry Set sirf ₹79 mein! --- 🛍️ LIMITED STOCK! jaldi karein! --- 
-        </div>
+        <div class="moving-text">🚀 SPECIAL OFFER: Butterfly Jewelry Set @ ₹79 Only! --- 💰 EARN MONEY: ₹20 to ₹100 per sale! --- 🛍️ SHOP NOW! </div>
     </div>
-    
     <div class="brand-name">Rivyaan Collective</div>
 
-    <img src="https://m.media-amazon.com/images/I/71Xm2WpWnGL._AC_UY1100_.jpg" alt="Butterfly Set" class="product-img">
+    <img src="[attachment_0](attachment)" alt="Butterfly Jewelry Set" class="product-img">
 
     <div class="links-container">
         <a href="https://fktr.in/h60m1cC" class="link-card">
-            🦋 Butterfly Jewelry Set (Pack of 1)
-            <span class="price-tag">Loot Price: ₹79/- Only 🔥</span>
+            🦋 Butterfly Jewelry Set
+            <span class="price-tag">Loot Price: ₹79/- 🔥</span>
         </a>
-
-        <div class="social-btns-row">
-            <a href="https://wa.me/91XXXXXXXXXX" class="social-btn wa">💬 WhatsApp</a>
-            <a href="https://t.me/your_telegram_link" class="social-btn tg">✈️ Telegram</a>
-        </div>
+        <a href="https://whatsapp.com/channel/your_link" class="social-btn wa-channel">📢 Join WhatsApp Channel</a>
+        <a href="https://t.me/your_link" class="social-btn tg-link">✈️ Join Telegram</a>
     </div>
-
-    <div class="earn-section">
-        💰 Ghar baithe paise kamayein! <br>
-        Har order par ₹20-₹100 ka commission.
-    </div>
-
-    <p style="font-size: 11px; margin: 30px 0 15px; opacity: 0.7;">© 2026 Rivyaan Collective</p>
-
+    <div class="earn-tag-english">Earn ₹20 - ₹100 on every sale! 💰</div>
+    <p style="font-size: 11px; margin-top: 20px; opacity: 0.7;">© 2026 Rivyaan Collective</p>
 </body>
 </html>
