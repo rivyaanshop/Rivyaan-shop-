@@ -3,40 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivyaan Collective</title>
+    <title>Rivyaan Collective | Premium Jewelry</title>
     <style>
-        body { font-family: sans-serif; background-color: #D3D3D3; color: #000000; text-align: center; margin: 0; padding: 0; }
-        .moving-bar { background: #000000; color: #ffffff; padding: 10px 0; font-weight: bold; overflow: hidden; white-space: nowrap; }
-        .brand-name { font-size: 36px; font-weight: 900; margin: 20px 0; text-transform: uppercase; }
-        .image-box { width: 280px; margin: 0 auto 20px auto; border: 4px solid #000; border-radius: 15px; overflow: hidden; background: #fff; }
-        .product-img { width: 100%; display: block; }
-        .container { max-width: 400px; margin: 0 auto; padding: 0 15px; }
-        .btn { background: #000; color: #fff; padding: 18px; margin-bottom: 12px; display: block; text-decoration: none; border-radius: 10px; font-weight: bold; }
-        .price { color: #00FF00; font-size: 22px; font-weight: 900; }
-        .social { padding: 12px; margin-bottom: 8px; border-radius: 8px; display: block; text-decoration: none; color: white; font-weight: bold; }
-        .wa { background: #25D366; }
-        .tg { background: #0088cc; }
-        .footer { margin-top: 20px; font-weight: bold; }
+        :root { --main-pink: #f8c8dc; --dark-pink: #e09fb8; --gold: #d4af37; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff5f8; margin: 0; padding: 0; color: #333; }
+        
+        /* Header & Hero Section */
+        header { background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://i.ibb.co/LzYv3zN/butterfly-set-full.jpg'); background-size: cover; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--main-pink); }
+        .brand-logo { font-size: 45px; font-weight: 900; letter-spacing: 5px; text-transform: uppercase; margin: 0; color: #000; }
+        .tagline { font-style: italic; color: var(--gold); font-size: 20px; margin-top: 10px; }
+
+        /* Grid Layout */
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 15px; }
+        .section-title { text-align: center; font-size: 24px; margin-bottom: 30px; border-bottom: 2px solid var(--main-pink); display: inline-block; padding-bottom: 5px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+        
+        /* Product Cards */
+        .product-card { background: #fff; border-radius: 15px; border: 1px solid #eee; padding: 15px; text-align: center; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .product-name { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+        .product-price { color: #2ecc71; font-weight: 900; font-size: 18px; margin-bottom: 15px; }
+        
+        .buy-btn { background: #ff4d6d; color: white; padding: 10px; border-radius: 8px; text-decoration: none; display: block; font-weight: bold; font-size: 14px; }
+        
+        /* Social Buttons */
+        .social-section { margin-top: 40px; }
+        .social-link { display: flex; align-items: center; justify-content: space-between; background: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .social-link.tg { background: #0088cc; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3); }
+
+        footer { background: #fff; padding: 20px; text-align: center; font-size: 12px; color: #999; margin-top: 50px; }
     </style>
 </head>
 <body>
-    <div class="moving-bar">🚀 SPECIAL OFFER: BUTTERFLY SET @ ₹79! 🚀</div>
-    
-    <div class="brand-name">Rivyaan Collective</div>
 
-    <div class="image-box">
-        <img src="https://assets.myntassets.com/dpr_2,q_60,w_200,c_limit,fl_progressive/assets/images/23473950/2023/6/15/d4f6470d-5878-452f-87d3-6e3a6a9b441f1686828551105-Jewellery-Set-1291686828550742-1.jpg" class="product-img" alt="Jewelry">
+    <header>
+        <h1 class="brand-logo">Rivyaan Collective</h1>
+        <div class="tagline">Elegance in Every Detail ✨</div>
+    </header>
+
+    <div class="container" style="text-align: center;">
+        <h2 class="section-title">✨ FEATURED COLLECTION ✨</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/LzYv3zN/butterfly-set-full.jpg" alt="Pendant">
+                <div class="product-name">Butterfly Pendant</div>
+                <div class="product-price">₹79/-</div>
+                <a href="https://fktr.in/h60m1cC" class="buy-btn">Buy Now</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/LzYv3zN/butterfly-set-full.jpg" alt="Bracelet">
+                <div class="product-name">Beaded Bracelet</div>
+                <div class="product-price">₹79/-</div>
+                <a href="https://fktr.in/h60m1cC" class="buy-btn">Buy Now</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/LzYv3zN/butterfly-set-full.jpg" alt="Earrings">
+                <div class="product-name">Stud Earrings</div>
+                <div class="product-price">₹79/-</div>
+                <a href="https://fktr.in/h60m1cC" class="buy-btn">Buy Now</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" style="background: #fff0f3; border: 1px dashed #ff4d6d;">
+                <img src="https://i.ibb.co/LzYv3zN/butterfly-set-full.jpg" alt="Full Set">
+                <div class="product-name">Full Combo Set</div>
+                <div class="product-price">₹79/-</div>
+                <a href="https://fktr.in/h60m1cC" class="buy-btn" style="background: #000;">Loot Deal</a>
+            </div>
+        </div>
+
+        <div class="social-section">
+            <a href="#" class="social-link">
+                <span>💬 Join WhatsApp Channel</span>
+                <span>➔</span>
+            </a>
+            <a href="#" class="social-link tg">
+                <span>✈️ Join Telegram Channel</span>
+                <span>➔</span>
+            </a>
+        </div>
     </div>
 
-    <div class="container">
-        <a href="https://fktr.in/h60m1cC" class="btn">
-            🦋 Butterfly Jewelry Set<br>
-            <span class="price">Loot Price: ₹79/-</span>
-        </a>
-        <a href="https://whatsapp.com/channel/your_link" class="social wa">📢 Join WhatsApp</a>
-        <a href="https://t.me/your_link" class="social tg">✈️ Join Telegram</a>
-    </div>
+    <footer>
+        © 2026 Rivyaan Collective | All Rights Reserved ❤️
+    </footer>
 
-    <div class="footer">Earn ₹20 - ₹100 on every sale! 💰</div>
 </body>
 </html>
