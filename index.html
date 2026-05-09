@@ -1,46 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivyaan Collective</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #D3D3D3; color: #000000; text-align: center; margin: 0; padding: 0; overflow-x: hidden; }
-        .moving-bar { background: #000000; color: #ffffff; padding: 12px 0; font-weight: bold; white-space: nowrap; overflow: hidden; }
-        .moving-text { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; }
-        @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
-        .brand-name { font-size: 38px; color: #000000; margin: 25px 0; font-family: 'Arial Black', sans-serif; font-weight: 900; text-transform: uppercase; }
-        .image-container { width: 85%; max-width: 300px; margin: 0 auto 25px auto; background: #ffffff; border-radius: 20px; border: 4px solid #000000; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-        .product-img { width: 100%; height: auto; display: block; }
-        .links-container { max-width: 400px; margin: 0 auto; padding: 0 15px; }
-        .link-card { background: #000000; border-radius: 15px; padding: 20px; margin-bottom: 15px; display: block; text-decoration: none; color: #ffffff; font-weight: bold; }
-        .price-tag { color: #00FF00; font-size: 24px; font-weight: 900; display: block; }
-        .social-btn { display: block; width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 12px; text-decoration: none; color: white; font-weight: bold; }
-        .wa-channel { background-color: #25D366; }
-        .tg-link { background-color: #0088cc; }
-        .earn-tag-english { background: rgba(0,0,0,0.05); padding: 15px; margin-top: 25px; font-weight: 900; border-top: 3px dashed #000000; color: #000000; font-size: 19px; }
-    </style>
-</head>
-<body>
-    <div class="moving-bar">
-        <div class="moving-text">🚀 SPECIAL OFFER: Butterfly Jewelry Set @ ₹79 Only! --- 💰 EARN MONEY: ₹20 to ₹100 per sale! --- 🛍️ SHOP NOW! </div>
-    </div>
-    <div class="brand-name">Rivyaan Collective</div>
+export default function RivyaanShop() {
+  const cards = [
+    {
+      emoji: '🛍️',
+      title: 'Amazon Fashion Finds',
+      subtitle: 'Cute aesthetic outfits under budget ✨',
+      color: 'from-pink-200 to-rose-100',
+    },
+    {
+      emoji: '🎀',
+      title: 'Meesho Kurti Collection',
+      subtitle: 'Stylish ethnic wear for daily looks 💕',
+      color: 'from-purple-200 to-pink-100',
+    },
+    {
+      emoji: '✨',
+      title: 'Pinterest Inspired Looks',
+      subtitle: 'Trendy girl aesthetic collections 🌸',
+      color: 'from-orange-100 to-pink-100',
+    },
+    {
+      emoji: '💎',
+      title: 'Digital Products',
+      subtitle: 'Templates, notes & aesthetic packs 📚',
+      color: 'from-cyan-100 to-blue-100',
+    },
+  ];
 
-    <div class="image-container">
-        <img src="https://m.media-amazon.com/images/I/71Xm2WpWnGL._AC_SL1500_.jpg" alt="Butterfly Set" class="product-img">
-    </div>
+  return (
+    <div className="min-h-screen overflow-hidden bg-gradient-to-br from-[#fff6fb] via-[#ffeef6] to-[#fff7ef] relative">
+      <div className="absolute top-0 left-0 w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-30 -translate-x-20 -translate-y-20" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-rose-100 rounded-full blur-3xl opacity-40 translate-x-20 translate-y-20" />
 
-    <div class="links-container">
-        <a href="https://fktr.in/h60m1cC" class="link-card">
-            🦋 Butterfly Jewelry Set
-            <span class="price-tag">Loot Price: ₹79/- 🔥</span>
-        </a>
-        <a href="https://whatsapp.com/channel/your_link" class="social-btn wa-channel">📢 Join WhatsApp Channel</a>
-        <a href="https://t.me/your_link" class="social-btn tg-link">✈️ Join Telegram</a>
-    </div>
+      <div className="relative z-10 flex items-center justify-center px-4 py-10">
+        <div className="w-full max-w-md">
+          <div className="bg-white/70 backdrop-blur-2xl border border-white/50 rounded-[38px] shadow-2xl p-5">
 
-    <div class="earn-tag-english">Earn ₹20 - ₹100 on every sale! 💰</div>
-    <p style="font-size: 11px; margin-top: 20px; opacity: 0.7;">© 2026 Rivyaan Collective</p>
-</body>
-</html>
+            <div className="relative rounded-[30px] overflow-hidden h-44 shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+                alt="fashion"
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/20" />
+
+              <div className="absolute bottom-4 left-4 text-white">
+                <h1 className="text-3xl font-bold tracking-wide drop-shadow-lg">
+                  Rivyaan Shop
+                </h1>
+                <p className="text-sm opacity-95 mt-1">
+                  Fashion • Aesthetic • Digital ✨
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-gray-600 leading-relaxed text-sm px-3">
+                Pinterest inspired outfits, trendy collections and cute digital finds for girls who love aesthetic vibes 🎀
+              </p>
+            </div>
+
+            <div className="grid gap-4 mt-7">
+              {cards.map((card, index) => (
+                <button
+                  key={index}
+                  className="group relative overflow-hidden rounded-[28px] bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-r ${card.color} opacity-60`} />
+
+                  <div className="relative flex items-center gap-4 p-4">
+                    <div className="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+                      {card.emoji}
+                    </div>
+
+                    <div className="text-left flex-1">
+                      <h2 className="font-bold text-gray-800 text-base">
+                        {card.title}
+                      </h2>
+                      <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                        {card.subtitle}
+                      </p>
+                    </div>
+
+                    <div className="text-2xl text-gray-500">→</div>
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <div className="mt-7 rounded-[30px] bg-gradient-to-r from-pink-200 via-rose-100 to-orange-100 p-5 text-center shadow-xl">
+              <div className="text-4xl">💖</div>
+              <h3 className="mt-2 text-xl font-bold text-gray-800">
+                New Collection Live
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                Cute fashion finds, Pinterest inspired styles and aesthetic digital products waiting for you ✨
+              </p>
+
+              <button className="mt-4 px-6 py-3 rounded-full bg-white text-pink-500 font-semibold shadow-md hover:scale-105 transition-transform duration-300">
+                Explore Now 🎀
+              </button>
+            </div>
+
+            <div className="mt-6 flex justify-center gap-4 text-2xl">
+              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                📌
+              </div>
+
+              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                🛒
+              </div>
+
+              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                📷
+              </div>
+            </div>
+
+            <div className="mt-7 text-center text-xs text-gray-500">
+              Made with 💕 by Rivyaan Shop
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
