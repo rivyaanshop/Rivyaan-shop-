@@ -1,127 +1,42 @@
-export default function RivyaanShop() {
-  const cards = [
-    {
-      emoji: '🛍️',
-      title: 'Amazon Fashion Finds',
-      subtitle: 'Cute aesthetic outfits under budget ✨',
-      color: 'from-pink-200 to-rose-100',
-    },
-    {
-      emoji: '🎀',
-      title: 'Meesho Kurti Collection',
-      subtitle: 'Stylish ethnic wear for daily looks 💕',
-      color: 'from-purple-200 to-pink-100',
-    },
-    {
-      emoji: '✨',
-      title: 'Pinterest Inspired Looks',
-      subtitle: 'Trendy girl aesthetic collections 🌸',
-      color: 'from-orange-100 to-pink-100',
-    },
-    {
-      emoji: '💎',
-      title: 'Digital Products',
-      subtitle: 'Templates, notes & aesthetic packs 📚',
-      color: 'from-cyan-100 to-blue-100',
-    },
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivyaan Collective</title>
+    <style>
+        body { font-family: sans-serif; background-color: #D3D3D3; color: #000000; text-align: center; margin: 0; padding: 0; }
+        .moving-bar { background: #000000; color: #ffffff; padding: 10px 0; font-weight: bold; overflow: hidden; white-space: nowrap; }
+        .brand-name { font-size: 36px; font-weight: 900; margin: 20px 0; text-transform: uppercase; }
+        .image-box { width: 280px; margin: 0 auto 20px auto; border: 4px solid #000; border-radius: 15px; overflow: hidden; background: #fff; }
+        .product-img { width: 100%; display: block; }
+        .container { max-width: 400px; margin: 0 auto; padding: 0 15px; }
+        .btn { background: #000; color: #fff; padding: 18px; margin-bottom: 12px; display: block; text-decoration: none; border-radius: 10px; font-weight: bold; }
+        .price { color: #00FF00; font-size: 22px; font-weight: 900; }
+        .social { padding: 12px; margin-bottom: 8px; border-radius: 8px; display: block; text-decoration: none; color: white; font-weight: bold; }
+        .wa { background: #25D366; }
+        .tg { background: #0088cc; }
+        .footer { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="moving-bar">🚀 SPECIAL OFFER: BUTTERFLY SET @ ₹79! 🚀</div>
+    
+    <div class="brand-name">Rivyaan Collective</div>
 
-  return (
-    <div className="min-h-screen overflow-hidden bg-gradient-to-br from-[#fff6fb] via-[#ffeef6] to-[#fff7ef] relative">
-      <div className="absolute top-0 left-0 w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-30 -translate-x-20 -translate-y-20" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-rose-100 rounded-full blur-3xl opacity-40 translate-x-20 translate-y-20" />
-
-      <div className="relative z-10 flex items-center justify-center px-4 py-10">
-        <div className="w-full max-w-md">
-          <div className="bg-white/70 backdrop-blur-2xl border border-white/50 rounded-[38px] shadow-2xl p-5">
-
-            <div className="relative rounded-[30px] overflow-hidden h-44 shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
-                alt="fashion"
-                className="w-full h-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-black/20" />
-
-              <div className="absolute bottom-4 left-4 text-white">
-                <h1 className="text-3xl font-bold tracking-wide drop-shadow-lg">
-                  Rivyaan Shop
-                </h1>
-                <p className="text-sm opacity-95 mt-1">
-                  Fashion • Aesthetic • Digital ✨
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 leading-relaxed text-sm px-3">
-                Pinterest inspired outfits, trendy collections and cute digital finds for girls who love aesthetic vibes 🎀
-              </p>
-            </div>
-
-            <div className="grid gap-4 mt-7">
-              {cards.map((card, index) => (
-                <button
-                  key={index}
-                  className="group relative overflow-hidden rounded-[28px] bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-r ${card.color} opacity-60`} />
-
-                  <div className="relative flex items-center gap-4 p-4">
-                    <div className="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
-                      {card.emoji}
-                    </div>
-
-                    <div className="text-left flex-1">
-                      <h2 className="font-bold text-gray-800 text-base">
-                        {card.title}
-                      </h2>
-                      <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                        {card.subtitle}
-                      </p>
-                    </div>
-
-                    <div className="text-2xl text-gray-500">→</div>
-                  </div>
-                </button>
-              ))}
-            </div>
-
-            <div className="mt-7 rounded-[30px] bg-gradient-to-r from-pink-200 via-rose-100 to-orange-100 p-5 text-center shadow-xl">
-              <div className="text-4xl">💖</div>
-              <h3 className="mt-2 text-xl font-bold text-gray-800">
-                New Collection Live
-              </h3>
-              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                Cute fashion finds, Pinterest inspired styles and aesthetic digital products waiting for you ✨
-              </p>
-
-              <button className="mt-4 px-6 py-3 rounded-full bg-white text-pink-500 font-semibold shadow-md hover:scale-105 transition-transform duration-300">
-                Explore Now 🎀
-              </button>
-            </div>
-
-            <div className="mt-6 flex justify-center gap-4 text-2xl">
-              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                📌
-              </div>
-
-              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                🛒
-              </div>
-
-              <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                📷
-              </div>
-            </div>
-
-            <div className="mt-7 text-center text-xs text-gray-500">
-              Made with 💕 by Rivyaan Shop
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="image-box">
+        <img src="https://assets.myntassets.com/dpr_2,q_60,w_200,c_limit,fl_progressive/assets/images/23473950/2023/6/15/d4f6470d-5878-452f-87d3-6e3a6a9b441f1686828551105-Jewellery-Set-1291686828550742-1.jpg" class="product-img" alt="Jewelry">
     </div>
-  );
-}
+
+    <div class="container">
+        <a href="https://fktr.in/h60m1cC" class="btn">
+            🦋 Butterfly Jewelry Set<br>
+            <span class="price">Loot Price: ₹79/-</span>
+        </a>
+        <a href="https://whatsapp.com/channel/your_link" class="social wa">📢 Join WhatsApp</a>
+        <a href="https://t.me/your_link" class="social tg">✈️ Join Telegram</a>
+    </div>
+
+    <div class="footer">Earn ₹20 - ₹100 on every sale! 💰</div>
+</body>
+</html>
