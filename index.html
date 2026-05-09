@@ -3,68 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rivyaan Collective | Boutique</title>
+    <title>Rivyaan Collective | Premium Boutique</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap');
-        :root { --light-pink: #fdf2f5; --accent-pink: #ff8fab; --text-dark: #4a3a3d; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--light-pink); color: var(--text-dark); }
-        .promo-bar { background: #ffb3c1; color: white; text-align: center; padding: 8px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
-        header { padding: 40px 20px; text-align: center; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 38px; letter-spacing: 6px; text-transform: uppercase; margin: 0; }
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;500&display=swap');
+
+        :root {
+            --light-pink: #fdf2f5;
+            --main-pink: #f8c8dc;
+            --accent-pink: #ff8fab;
+            --text-dark: #4a3a3d;
+        }
+
+        body { 
+            margin: 0; padding: 0; 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--light-pink); 
+            color: var(--text-dark);
+        }
+
+        /* 1. Running Line (Marquee) */
+        .marquee-container {
+            background: linear-gradient(90deg, #ff8fab, #ffb3c1);
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-text {
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+            letter-spacing: 1px;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        header { padding: 30px 20px; text-align: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 35px; letter-spacing: 5px; text-transform: uppercase; margin: 0; }
+
         .container { max-width: 480px; margin: 0 auto; padding: 0 15px; }
-        .hero-card { background: white; border-radius: 30px; padding: 10px; box-shadow: 0 15px 35px rgba(248, 200, 220, 0.4); margin-bottom: 30px; }
-        .hero-img { width: 100%; border-radius: 25px; display: block; }
-        .pricing-box { background: white; border-radius: 20px; padding: 25px; text-align: center; margin-top: -50px; position: relative; z-index: 2; width: 80%; margin-left: auto; margin-right: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .new-price { font-size: 42px; font-weight: 600; color: var(--accent-pink); font-family: 'Cormorant Garamond', serif; }
-        .grab-btn { display: block; background: linear-gradient(135deg, #ff8fab, #ffb3c1); color: white; text-decoration: none; padding: 20px; border-radius: 50px; text-align: center; font-weight: 600; margin: 25px 0; }
-        
-        /* Clean Footer */
-        footer { 
-            background: #fdf2f5; 
-            padding: 50px 25px 30px; 
-            border-top: 1px solid #f8c8dc; 
+
+        /* 2. Image Slider (Slide Type) */
+        .slider-frame {
+            background: white;
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 0 10px 30px rgba(248, 200, 220, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .slider-container::-webkit-scrollbar { display: none; }
+        .slide {
+            min-width: 100%;
+            scroll-snap-align: start;
+        }
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        /* 3. Pricing & Earn Section */
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+        .earn-tag {
+            background: #fff0f3;
+            color: var(--accent-pink);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 1px dashed var(--accent-pink);
+        }
+
+        .btn-main {
+            display: block;
+            background: var(--accent-pink);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 15px;
+            box-shadow: 0 8px 20px rgba(255, 143, 171, 0.4);
+        }
+
+        /* 4. Flip/App Style Buttons */
+        .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0; }
+        .app-btn {
+            background: white;
+            padding: 20px 10px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border-bottom: 4px solid #eee;
+        }
+        .app-btn:active { transform: translateY(2px); border-bottom-width: 2px; }
+        .app-btn img { width: 35px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
+
+        /* 5. Support Section */
+        .support-box {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 40px;
             text-align: left;
         }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 2px; margin-bottom: 15px; }
-        .contact-info { font-size: 14px; line-height: 1.8; }
+        .support-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; margin-bottom: 15px; border-left: 4px solid var(--accent-pink); padding-left: 10px; }
+        .contact-link { display: flex; align-items: center; text-decoration: none; color: var(--text-dark); margin: 15px 0; font-size: 14px; }
+        .contact-link i { margin-right: 12px; font-style: normal; font-size: 18px; }
+
+        footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 11px; }
     </style>
 </head>
 <body>
 
-    <div class="promo-bar">✨ COMBO SET @ ₹79 ONLY ✨</div>
+    <div class="marquee-container">
+        <div class="marquee-text">
+            ✨ WELCOME TO RIVYAAN COLLECTIVE — BUTTERFLY COMBO @ ₹79 ONLY — 💰 SHARE & EARN UP TO ₹100 PER SALE — JOIN OUR COMMUNITY ✨
+        </div>
+    </div>
 
     <header>
         <h1 class="logo">Rivyaan</h1>
-        <div style="letter-spacing: 4px; opacity: 0.6; font-size: 12px;">COLLECTIVE</div>
+        <div style="letter-spacing: 3px; font-size: 10px; opacity: 0.6;">COLLECTIVE</div>
     </header>
 
     <div class="container">
-        <div class="hero-card">
-            <img src="https://i.postimg.cc/CKM4cLC5/IMG-20260509-095939.jpg" class="hero-img" alt="Rivyaan Collection">
-        </div>
-
-        <div class="pricing-box">
-            <span class="new-price">₹79</span> <span style="font-size: 18px;">only</span>
-            <p style="color: #2ecc71; font-weight: bold; margin: 5px 0 0;">Limited Time Offer!</p>
-        </div>
-
-        <a href="https://fktr.in/h60m1cC" class="grab-btn">✨ Grab The Deal</a>
         
-        <p style="text-align: center; font-size: 14px; line-height: 1.6; padding: 0 10px;">
-            Crafting elegance through delicate butterfly-inspired jewelry that celebrates femininity and grace.
-        </p>
+        <div class="slider-frame">
+            <div class="slider-container">
+                <div class="slide"><img src="https://i.postimg.cc/0y4BKS1q/IMG-20260509-120555.jpg"></div>
+                <div class="slide"><img src="https://i.postimg.cc/5NGpNVVW/IMG-20260509-103523.jpg"></div>
+                <div class="slide"><img src="https://i.postimg.cc/bwcbBNPh/IMG-20260509-103406.jpg"></div>
+                <div class="slide"><img src="https://i.postimg.cc/855r67RZ/IMG-20260509-100020.jpg"></div>
+                <div class="slide"><img src="https://i.postimg.cc/Vs2DzwwK/IMG-20260509-095958.jpg"></div>
+            </div>
+            <div style="text-align:center; font-size: 10px; padding: 5px; opacity: 0.4;">Swipe for more images ➔</div>
+        </div>
+
+        <div class="pricing-card">
+            <div class="earn-tag">💰 Resell & Earn ₹20-100</div>
+            <div style="font-size: 32px; font-weight: 600; color: var(--accent-pink);">₹79</div>
+            <a href="https://fktr.in/h60m1cC" class="btn-main">🛍️ ORDER NOW</a>
+        </div>
+
+        <div class="app-grid">
+            <a href="YOUR_WA_LINK" class="app-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA">
+                WhatsApp Channel
+            </a>
+            <a href="YOUR_TG_LINK" class="app-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="TG">
+                Telegram Group
+            </a>
+        </div>
+
+        <div class="support-box">
+            <div class="support-title">Customer Support</div>
+            <p style="font-size: 13px; opacity: 0.7;">Hum aapki help ke liye 24/7 available hain.</p>
+            
+            <a href="mailto:rivyaancollective@gmail.com" class="contact-link"><i>📧</i> rivyaancollective@gmail.com</a>
+            <a href="YOUR_WA_LINK" class="contact-link"><i>💬</i> Chat with us on WhatsApp</a>
+            <a href="YOUR_TG_LINK" class="contact-link"><i>✈️</i> Join Telegram Support</a>
+            
+            <div style="margin-top: 15px; font-size: 12px; color: var(--accent-pink);">📍 India | Pan India Delivery</div>
+        </div>
+
     </div>
 
     <footer>
-        <div class="footer-logo">RIVYAAN COLLECTIVE</div>
-        <div class="contact-info">
-            <div>📧 rivyaancollective@gmail.com</div>
-            <div>📍 India</div>
-        </div>
-        <div style="margin-top: 40px; font-size: 10px; opacity: 0.5;">
-            © 2026 Rivyaan Collective. All rights reserved.<br>
-            Made with ❤️ in India
-        </div>
+        © 2026 Rivyaan Collective<br>Premium Jewelry Boutique
     </footer>
 
 </body>
